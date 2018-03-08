@@ -308,4 +308,6 @@ interface IBluetooth
     @JavaPassthrough(annotation="@android.annotation.RequiresPermission(android.Manifest.permission.BLUETOOTH_CONNECT)")
     boolean isBroadcastActive(in AttributionSource attributionSource);
 
+    int setSocketOpt(int type, int port, int optionName, in byte [] optionVal, int optionLen);
+    int getSocketOpt(int type, int port, int optionName, out byte [] optionVal);
 }
